@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Berlin Diary — Alexei & Friedrich</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#moments">Skip to life events</a>
+  <header class="site-header">
+    <a class="project-name" href="#year-1927">Berlin Diary</a>
+    <h1>Alexei &amp; Friedrich</h1>
+    <span class="life-span">1907–1989</span>
+  </header>
+
+  <main id="moments" aria-label="Alexei and Friedrich’s lives">
+    <div class="reading-guide">
+      <p>Scroll through their lives, or drag the timeline.</p>
+      <p>Ages use the 1907 / 1908 birth years. Proposed story details are marked.</p>
+    </div>
+    <div id="events"></div>
+    <p class="end-note">Ages are those reached that year. Before a birthday, subtract one.</p>
+  </main>
+
+  <aside class="timeline" aria-label="Timeline navigation">
+    <div class="timeline-heading">
+      <output id="current-year" for="year-slider">1927</output>
+      <span id="current-state">Growing attachment</span>
+    </div>
+    <div class="timeline-track" id="timeline-track">
+      <div class="date-ticks" id="date-ticks"></div>
+      <div class="event-marks" id="event-marks" aria-hidden="true"></div>
+      <label class="sr-only" for="year-slider">Move through the timeline from 1907 to 1989</label>
+      <input id="year-slider" type="range" min="1907" max="1989" step="0.01" value="1927" orient="vertical" aria-valuetext="1927. They meet as students.">
+    </div>
+    <div class="timeline-navigation">
+      <button id="previous-event" type="button" aria-label="Previous event" title="Previous event">↑</button>
+      <button id="next-event" type="button" aria-label="Next event" title="Next event">↓</button>
+    </div>
+  </aside>
+
+  <dialog id="narrative" aria-labelledby="narrative-title">
+    <div class="narrative-toolbar">
+      <span id="narrative-label">Narrative outline</span>
+      <button id="close-narrative" type="button" aria-label="Close narrative">Close ×</button>
+    </div>
+    <p id="narrative-date" class="narrative-date"></p>
+    <h2 id="narrative-title"></h2>
+    <p id="narrative-location" class="narrative-location"></p>
+    <div id="narrative-ages" class="age-pair"></div>
+    <div id="narrative-copy" class="narrative-copy"></div>
+  </dialog>
+  <noscript><p class="noscript-message">Enable JavaScript to explore this timeline.</p></noscript>
+</body>
+</html>
